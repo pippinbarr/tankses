@@ -131,3 +131,149 @@ If the verbs here are MOVE, SHOOT, EVALUATE (which is starting to get toward stu
 There's perhaps something there. But is it just that something like "Point Light" is inspiring in a way that something like Sprites > Hexagon really, really isn't? And isn't it true, by the way, that not every possible engine part makes any sense to choose as an intervention (on its own)? Like "Canvas" on its own does squarely nothing, is invisible, etc.
 
 Well I suppose this has been at least somewhat productive. I need to think more though. And I will.
+
+---
+
+## 2017-12-30 15:55, in which we write some more words trying to find our way to something to hold onto
+
+__What am I even doing?__
+
+Let me say that this is kind of interesting as project because I'm "in The Method" right now without really knowing much of anything about what it is beyond 'variations based on TANKS!'. I guess, to be fair, _Sibilant Snakelikes_ began in much the same way, with only a vague idea of remediation of existing games. Here I have a similarly vague concept of 'thinking about the Unity engine' or something along those lines. So it's not like I haven't been here before. Nonetheless it's uncomfortable and somehow feels different (even if perhaps it isn't).
+
+---
+
+__Conversation with materials?__
+
+One thing that I think this project may represent a chance to try is using Git branches to represent exploratory prototyping? In particular, because I'm not _that_ familiar with Unity as a tool, it may well be the case I need to feel things out with the materials more than I normally would - I can't necessarily 'think in Unity' in the same way I can 'think in Phaser' (or even 'think in Unity+First Person+Architecture'). And indeed the point of this project is, to some extent, a conversation with materials. As such we're kind of talking Reflective Practitioner? I should probably re-read at least my notes on that as a kind of grounding for this project. (Just like I read remediation and metaphor literature for _Sibilant_ right? Ha ha. As in, I didn't do it then so let's not assume I will now.)
+
+But, ha has aside, maybe that idea of a "conversation with materials" is actually a useful structuring principle for this? Above I wrote about the idea of the combination of basic verbs of play (move, shoot, evaluate) and how they might interact with the potential of specific game engine parts (like points lights and UI canvases).
+
+So can I set this up as a kind of triad? (Hi Bart.) Like there's the Designer (me), there's the material (Unity) and there's the... what, conceptual material? (TANKS! design). Triangles. Subject Tool Object?
+
+This is at least feeling a bit like a frame? Then you could have a Git branch that represents a specific attempt at a conversation with specific material properties of Unity. So you open a branch that is about Light (or specifically Point Light?) and then you take the framework of TANK! and you look at it for affordances to introduce (Point) Light in a way that... what? There's a kind of creative/interpretive leap there that feels weird.
+
+Like is it okay to say "well I'm just going to come up with something cool in TANKS! based on this element of the Unity engine"? I guess it's okay so long as the "something cool" is documented through its discovery and reasoning. I need to be able to think through _how_ the material and the design work together.
+
+And what question is being asked and explored here? That's important. Yes you can be having a conversation with the materials, but what are we learning from that - especially given my status as a non-expert in the context of the materials specifically (even if I'm in some sense an expert in design). Look, what if we take a specific example that I've already thought about making in the context of CART 415 (which is another feature in this whole thing) and think about it. Odd because I haven't actually explored this in-engine, but still let's see...
+
+---
+
+__Light, by way of example__
+
+So if I were to take _Light_ as an input/material (for now let's not worry about whether I should think in specific types of light). One idea I have is that the scene is unlit. The shells are replaced by Point Lights (fine with Real Time lighting). When you fire a shell it lands and instead of blowing up it stays there, illuminating the scene where it is. So we're talking about an interaction between SHOOT and LIGHT in this case. We could further imagine an idea that you take damage from light, so if you're within its sphere of illumination you're being damaged (could do this with a Trigger Collider that same dimensions as the sphere of illumination). This creates a relationship between SHOOT and EVALUATION that's different - you can't see your opponent or yourself unless in the light, but if you go into light to figure out where you are, you get damaged and potentially die, creating a trade-off and a potential need to a greater kind of 'kinesthetic awareness' on the part of the player to be able to drive around in the dark.
+
+This idea could be complicated easily by layering more rules. Like the tanks could fire coloured lights such that they're not damaged by their own lights, so they could use them to figure out where they are AND to attack their opponent.
+
+---
+
+__Let there be light?__
+
+But the instant you start thinking that way you have to ask yourself: _what is this about?_ The above idea is clearly an extension of/intervention into the TANKS! design that is inspired by LIGHT. It clearly leads to a related but different form of play. It might even be fun/entertaining. But what is it telling us? Why that specific kind of intervention and not something completely different? Why not Light in terms of dramatic illumination in the style of German Expressionist Cinema, for example? Why one approach and not another?
+
+This raises one question/idea: rather than creating a game that has one version based on one part of the engine, what if you made TANKS!ES: LET THERE BE LIGHT, for example, and made a suite of games that were entirely about using Unity's lighting system to create variations on TANKS!
+
+Again there's a suspicious lack of rigour and, somehow, of intelligence here? But is that somehow okay? What if I just suck it up and say, well, I'm going to make a set of variations of TANKS! all of which use Unity's lighting capacity to create new gameplay affordances and aesthetic possibilities? And I learn what I learn along the way? Still feels pretty loosey goosey? Not much to grab onto there? I'd learn plenty about just implementing different shit in Unity, I might make some semi-entertaining games, but does this _tell me anything about light in Unity_? It's not clear that it does.
+
+If I did use this higher level strategy I'd have
+
+- TANKS!es: Light
+- TANKS!es: 3D object
+- TANKS!es: 2D object
+- TANKS!es: Audio
+- TANKS!es: Video
+- TANKS!es: UI
+- TANKS!es: Particle System
+- TANKS!es: Camera
+
+Which is starting to seem like it could be kind of intriguing? Like how to refactor a simple game (TANKS!) by using a specific form of material that a game engine deems _fundamental_ to its ontology. These are the things that exist as kind of first-order entities inside Unity. To then attempt to work with those fundamental materials in order to explore how they could lead to different forms of play is an interesting idea. In this case TANKS! is just a kind of patsy - it's not that important that it's TANKS! specifically (other than it being a kind of Ur game).
+
+It lacks a bit in terms of being TOTALLY FORMAL in a way I'm fond of, but it's no less formal than something like PONGS, which had no objective other than "what small changes can I introduce to Pong in order to make it a different game?". And PONGS was revelatory in a lot of ways. Splitting this out into multiple different games makes the task seem more interesting to me. Rather than having the "one true Point Light" game, we have a whole bunch of different Light games that seek to explore the design affordances of Light, at least in the context of a highly traditional videogame.
+
+Okay this is beginning to sound like something I believe in.
+
+I'm all like, "Hi materials, I'm Pippin. I'd like to get to know you better."
+
+---
+
+__Ugly Piece of Shit Behemoth?__
+
+I think I'll start with Light.
+
+I'm now realising I need separate repos for each of these games? DO I? Or do w... yes, ... well...
+
+No maybe I don't unless I'm worried about it becoming gargantuan? Technically all these approaches use the same underlying code and assets (except 3D object which will use others presumably). So I could build them all in the same project but then create separate executable RELEASES which I release over time.
+
+I'm kind of stressed out about file management with Unity after _v r 3_ became such an ugly piece of shit behemoth.
+
+In my dreams this whole thing works because I'm ultimately building on top of TANKS! and TANKS! on its own is something like 187MB as a project, which is not by any stretch of the imagination overly enormous. And actually somehow SOMEHOW 76MB of that is just in the lighting for a single scene? Raises the question of whether scene lighting is going to be horrible. BUT if I switch entirely to realtime lighting that becomes a non issue? But these are the kinds of questions I think I need to ask as practicalities.
+
+Note that this isn't in terms of just making the game in general, because who really cares how large it gets. These are questions that _The Method_ requires me to ask. Because I need to be able to make the source of the thing available. Not so much for open sourcing (though that's a nice thing to think and care about) but because I need the commit history and for that to work the whole thing has to fit online properly. And therefore the repo needs to be under 2GB or so. Now obviously that's not a problem here, but I end up concerned about the repo being svelte or something. Haha. Harharhar. har.
+
+Okay so there's a boring step at the start which is creating the minimal project that successfully represents the Unity Tanks Tutorial final outcome with the fewest possible files in it. And from there I can being with Git branches for each separate approach (e.g. Point light shells or whatever) and then merge them as successful when they're not (I guess I only merge when their scene 100% works?). Have to be careful about prefabs and so on and not changing them just for a single version - if I seriously need a prefab to change I should create a new one.
+
+Those sorts of emerging 'rules' for development are part of this whole thing and are important. The desire to kind of maintain the purity of the initial project is important. As in, ideally if I'm making a project out of Light then I should only really be changing things related to light (e.g. adding lights, changing the overall lighting, changing scripting in relation to lighting, etc.). That's quite a nice constraint for me really and should make the rules of design a little clearer and the 'conversation with materials' a little easier to hear. If I may. I may.
+
+Alright kid, I think you could start this game. And if you start this game you're effectively preparing for CART 415 because talking about this could actually end up being the main form of lecturing for me personally and my main contribution to discussion. I guess I don't know if I'll manage to go at at their pace? That's a different concern though. That's fine. But this does make me notice that I'll need a separate Unity project in which I can build versions of TANKS! in relation to weekly discussions. They'll be significantly more hacky that what I attempt to produce for my releasable version.
+
+---
+
+__Titling?__
+
+TANKS!ES is the base name. I think currently that it makes the most sense to release differnet suites of variations as completely separate builds, rather than trying to release one megabuild that I update over time with 'DLC'. So
+
+- TANKS!ES: LET THERE BE LIGHT! (LIGHT)
+
+? If I want to have kind of comedy titles? Better than the boring alternative of just literally having the Unity Create Menu title. Yeah. So then...
+
+- TANKS!ES: (SOUND)
+- TANKS!ES: (3D OBJECT)
+- TANKS!ES: (2D OBJECT)
+- TANKS!ES: I AM CAMERA! (CAMERA)
+- TANKS!ES: (UI)
+- TANKS!ES: (PARTICLE SYSTEM)
+- TANKS!ES: (VIDEO)
+
+Actually as I try to come up with comedy names I'm kind of fucking failing and I suddenly wonder if the boring alternative is better?
+
+- TANKS!ES: CREATE > LIGHT
+
+Just straight up referencing the literal Unity Materials in question? Pluralise?
+
+- TANKS!ES: LIGHTS
+- TANKS!ES: CAMERAS
+- TANKS!ES: AUDIOS < that kind of sucks
+- TANKS!ES: USER INTERFACES
+- TANKS!ES: 2D OBJECTS
+- TANKS!ES: PARTICLE SYSTEMS
+
+It mostly works okay. "AUDIOS" sucks. Bleah.
+
+---
+
+__How much is enough?__
+
+Question: how many variations do you need to consider one of these games done? Do I set a hard limit to reach in every single one, like 10? Do I just "feel it" and the different things have different numbers of engagements? I think the latter is probably more fair. But maybe a minimum to avoid having a single 'variation'? Need at least, say, five versions in order to be able to see some kind of conversation between versions and discern some kind of ... knowledge-thing... from them... oh god writing.
+
+Let's say (for now) a minimum of 5, no maximum.
+
+---
+
+__How will design proceed?__
+
+One nice thing here is that because I legitimately don't know so, so much about Unity, I'm going to need to really do the conversation with materials thing more fully and immediately than usual. Normally there's of course a conversation with Phaser as I work out finer points of design via development, but generally speaking I can "think in Phaser" as I design such that I can write a bunch of design ideas based on knowing the kind of thing I can achieve. Here that's not really true, so it's likely a significant amount of the design process is going to be
+
+- Sitting in the engine trying stuff out
+- Reading the actual documentation of the Unity elements seeing what's possible (especially in terms of the scriptable properties of these things)
+- Probably looking up what other people have done in terms of those elements
+
+Honestly I'm quite excited by this project at this point. I think it has real merit as an exploration of the engine as material and I think it's experimental form is pretty legitimate.
+
+---
+
+__Next steps__
+
+- Create minimal version of the TANKS! project (useful for CART 415 too)
+- Set the repo ... well it's already in motion so that's fine
+- Start playing around (perhaps by making that first version of the game)
+
+I suspect that actually building out a light-based version of the game is going to throw me back into some interesting/trouble considerations of the actual underlying concept here, so I'll look forward to that potential agony when it comes.
