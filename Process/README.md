@@ -277,3 +277,53 @@ __Next steps__
 - Start playing around (perhaps by making that first version of the game)
 
 I suspect that actually building out a light-based version of the game is going to throw me back into some interesting/trouble considerations of the actual underlying concept here, so I'll look forward to that potential agony when it comes.
+
+
+## 2017-12-31 10:10, in which I've officially created the base Unity project with TANKS! in it and I think about how even that was surprisingly stressful
+
+Okay, so I bit the bullet and created the base version of the game. That is, it's the Unity TANKS! tutorial CompleteGame setup. I deleted all the stuff that was the incomplete versions from the setup so I didn't commit them as they're not of interest in this context. But also...
+
+__LightingData__
+
+One of the things that stresses me out with Unity + Git is the size of the projects. I don't know if it's a stupid worry (it might be), but I fret that the whole thing will become massive and unmanageable and eventually I won't be able to upload it anymore. Now, TANKS!ES isn't likely to fit that bill I don't think? There's aren't masses of assets to put into the game, which are the big space-takers - though there will inevitably be a bunch of audio and 3D and 2D assets that will have to go in I guess... but presumably not maaaaaaassive? Well I suppose that's a question that will come with time.
+
+When I was checking the actual size of the folder for the game I ended up sleuthing around to see what was big. And one of the big things is the LightingData for the CompletedGame scene. Initially I felt like this was unnecessary/redundant because the game uses Realtime Lighting. So I deleted it thinking it made no difference. But of course when I played the game it was a bit darker now, so clearly the LightingData was for something (I mean, it's kind of obvious that it would be). So I looked up LightingData a bit and found that because the game uses Realtime Precomputed GI, if you want precomputed GI you still have to Generate Lighting and therefore generate a (large-ish) LightingData file. Given that I'm going to end up with a bunch of scenes in this project (like as many as 60+???) it seemed like that could get out of hand quickly... like 1GB of lighting data or something? There's another part of me that wonders whether Unity can tell if you have duplicate or related lighting data and therefore won't actually recompute it for scenes where it's not relevant? But any changes to the 3D world and any changes to the lighting would presumably necessitate distinct LightingData files, so it could still be big.
+
+My solution for now has been to delete the LightingData and to rely entirely on Realtime light, no precomputation. It may well turn out there are major reasons _not_ to do that, but the advantage here is that if it's a problem I can just generate the lighting and it will be okay. The big risk seems to be around expensive computation during play that could create lag, so I'll just monitor that as I go along. I'm also perfectly willing to believe I'll see some weird fucked up lighting because of this... and again, I'll deal with that when it comes to me.
+
+This _isn't_ especially interesting in terms of design right now, but it's a good illustration of the complexities of learning a new system, and the complexities of the many interlocking parts involved in a project like this... from Git to GitHub to Unity to LightingData and so on. Have to be able to hold it all in your head to some extent _from the beginning_ so as to make decisions that don't fuck you over later on. So, I'm trying mom.
+
+__CART 415 and project organisation__
+
+This project is intimately related to my CART 415 course this year in that I'm asking the students to pursue a similar kind of experimental exploration of the Unity engine in the context of the TANKS! tutorial game. I'm not asking them to do it in the same way or spirit as me and I'm not asking them to document to the insane level I'm favouring here, but TANKS! in Unity is going to be our core object of study.
+
+To that end I initially duplicated my TANKS!ES project folder to have a version that I'd do CART 415-related manipulations in, but now I'm wondering about that. Given that the CART 415 project and discussion is around _exactly what I'm doing for TANKS!ES_, would it not make sense to do my explorations of ideas for CART 415 _in the TANKS!ES_ project. Otherwise I'm effectively splitting the same thinking and investigations artificially in two, and in terms of The Method, that seems like it could be problematic. There's no real distinction between me making exploratory versions of TANKS! to show and discuss with the class and me making "proper" versions of TANKS! that will form the games/levels of TANKS!ES, right?
+
+I guess my only concern is about a kind of profusion of files and mess in the project that could get out of hand, but perhaps that can just be managed by being careful with folder structures. Notably it would make sense for me to separate out Prefabs, Scripts, Scenes etc. for the different iterations of TANKS!ES. And in terms of CART 415 the four projects are basically versions of TANKS!ES I'm thinking about anyway... "Lights, Camera" correspond to two of my versions, "Sound" corresponds to one, "Space and substance" corresponds (I guess) to "3D Objects" and "Interface" corresponds to UI (along with some other scripting). I guess the biggest difference I see in there is just that I'm intepreting "Interface" to include controls for CART 415, but I don't intend to do any of that in TANKS!ES (it's not implied by the Create menu I don't think).
+
+So I guess my thought is that every new Scene is a _branch_ in the repository (so I desperately have to fucking remember to actually create those branches oh my god). And this would go for experiments to show the class as well as more designed ideas to implement for TANKS!ES proper. And they get merged into the main project when they're done (or done enough to be considered a specific part of the project), or never merged if they're not useful for whatever reason. (It would also be possible to do work that I don't actually want in the project in branches that I could switch to with SourceTree during class?)
+
+Or another idea here is that CART 415 experiments are _perpetually_ in a CART 415 branch of the project, and that they then sometimes no doubt feed into branches that are for actual games to build? I don't actually know what a good structure is here. The experimentation for CART 415 seems like it's reflective of a specific level of development for TANKS!ES, more feeling your way, trying out cheap tricks that might be developed further (because obviously week to week I'm not going to have time to flesh out all these possibilities - I can only really attempt things that are relatively simple).
+
+So should there be an 'explorations' branch from the beginning that contains all of the exploration stuff, and then other named branches would be specifically for versions of the game I'm looking to merge into the main project? That kind of makes sense? Definitely going to need to use SourceTree from here on. Fine. I will. (It's better for The Method anyway in terms of the ability to quickly view specific commits.)
+
+Yeah okay, so there thing would look like (oh wait I think maybe an explorations for each subgame makes sense to keep them a bit more organised?). The explorations branches would _never be merged_. The subgames branches would be merged when they were done (enough) to become part of the master (not clear to me when that moment is, but I guess I'll feel it out). So the branches are...
+
+- master (the project itself)
+
+- light-explorations
+- camera-explorations
+- ...
+
+- light-darkroom-sex-tanks (or whatever, I mean that's a hilarious idea though, whoa, but this would be an actual version of a game for the light collection - I'd use the prefix just to be organised)
+- ...
+
+This is all sounding kind of daunting and huge as a project at this point, but I need to remember that actual individual games for the collections are _not_ meant to be that insanely big and details.
+
+__Ready, player one?__
+
+With that, I suspect I'm ready to actually begin on this beautiful journey and just start seeing what happens. At a certain point you do have to just Let Go Let God and suffer the consequences. There's no question I'll have calculated badly wrong about various of the ideas here and that certain aspects of the project will be a nightmare. A main guiding light here, weirdly, is just being able to track and report on those failures I expect to have. More than anything I just don't want the repo to get so fucked up that it's no longer possible to view it and understand what's happening.
+
+One great thing here is that I'm introducing an extra level of detail with the branching which I'm hopeful about (as well as all the Unity learnin' obviously). This will be a chance to see how Baby's First Branching relates to the The Method world. We all have an assumption it's a positive, but nobody has really tackled it in a project so, here I am, on the front lines, stepping on mines. For you, the viewer.
+
+That's it. I've written inordinate amounts already about this game I haven't started making, but I think I've written myself into a place of at least understanding what's ahead of me and what I'm looking to achieve. Hi. It's me. Your son.
