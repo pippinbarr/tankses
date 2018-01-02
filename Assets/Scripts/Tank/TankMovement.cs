@@ -20,13 +20,13 @@ namespace Complete
         private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
         private ParticleSystem[] m_particleSystems; // References to all the particles systems used by the Tanks
 
-        private void Awake ()
+        protected virtual void Awake ()
         {
             m_Rigidbody = GetComponent<Rigidbody> ();
         }
 
 
-        private void OnEnable ()
+        protected virtual void OnEnable ()
         {
             // When the tank is turned on, make sure it's not kinematic.
             m_Rigidbody.isKinematic = false;
@@ -46,7 +46,7 @@ namespace Complete
         }
 
 
-        private void OnDisable ()
+        protected virtual void OnDisable ()
         {
             // When the tank is turned off, set it to kinematic so it stops moving.
             m_Rigidbody.isKinematic = true;
@@ -59,7 +59,7 @@ namespace Complete
         }
 
 
-        private void Start ()
+        protected virtual void Start ()
         {
             // The axes names are based on player number.
             m_MovementAxisName = "Vertical" + m_PlayerNumber;
@@ -70,7 +70,7 @@ namespace Complete
         }
 
 
-        private void Update ()
+        protected virtual void Update ()
         {
             // Store the value of both input axes.
             m_MovementInputValue = Input.GetAxis (m_MovementAxisName);
@@ -108,7 +108,7 @@ namespace Complete
         }
 
 
-        private void FixedUpdate ()
+        protected virtual void FixedUpdate ()
         {
             // Adjust the rigidbodies position and orientation in FixedUpdate.
             Move ();
