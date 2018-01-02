@@ -359,15 +359,15 @@ I've contemplated some vague images in my mind of versions of the game for Light
 - Rather than being damaged by light, you fire lights to illuminate the world and understand it?
 - You fire pointlights that stay on the ground and if you drive through them the light sticks to you (either the point light or even changing emission of your tank's material?) - I guess this is 'just' a representation of damage?
 
-Even in this brief flirtation with other design possibilities I'm running into a formal issue. Which the question of whether the underlying game should be kept (relatively) consistent or not. Like, TANKS! is pretty unavoidably about killing your opponent with projectiles, right? To what extent is it okay for my variations to deny that basic principle? As earlier, the verbs here are move, shoot, evaluate - am I honour bound to think about my variations/interventions in those terms? Can I _negative_ one or more of them in a design?
+Even in this brief flirtation with other design possibilities I'm running into a formal issue. Which the question of whether the underlying game should be kept (relatively) consistent or not. Like, TANKS! is pretty unavoidably about killing your opponent with projectiles, right? To what extent is it okay for my variations to deny that basic principle? As earlier, the verbs here are move, shoot, evaluate - am I honour bound to think about my variations/interventions in those terms? Can I _negate_ one or more of them in a design?
 
-This speaks to a possible more grounded question around the "materials" aspect of all this.
+This speaks to a possibly more grounded question around the "materials" aspect of all this.
 
 If the idea here is to take a _specific material_ like Light and intervene in and with it to create a variation, should I be aiming to _only_ intervene in and with that material? Like, in the Light versions of the game, am I only working with gameobjects that are Lights, the Lighting view in the Inspector, and Lighting-relevant API code in scripts? That's a very striking limitation and it's pretty appealing in terms of answering questions... but does it end up being so restrictive that you can't do something "interesting"?
 
 And what is "interesting" anyway? The point of the project is about a conversation with materials. What if they're boring conversational partners? What if they don't want to talk to me? Ha ha. But seriously...
 
-Re: the whole question of the Tank Ur-Game being about shooting... well, one thing we could say in the context of an engine-oriented take on this is that we're really talking about moving objects, projectiles, and reactions to those projectiles. As such it's not necessarily the case that we have to talk about destruction/death/killing. A game of catch or ultimate frisbee or basketball has the same principle ideas. As close range you can even thinking about projectiles as simply _giving_ something to someone else.
+Re: the whole question of the Tank Ur-Game being about shooting... well, one thing we could say in the context of an engine-oriented take on this is that we're really talking about moving objects, projectiles, and reactions to those projectiles. As such it's not necessarily the case that we have to talk about destruction/death/killing. A game of catch or ultimate frisbee or basketball has the same principle ideas. At close range you can even think about projectiles as simply _giving_ something to someone else.
 
 BUUUUUUT those kinds of potential changes could easily involve changes to code _not_ directly related to the material in question.
 
@@ -376,3 +376,23 @@ So, the question is about the kind of conversation we can have perhaps. Is it pu
 But, devil's advocate, is there something cool about keeping the basic principles of the game (projectiles unto death) stable? It's a funny fuck you to my personal preferences in design?
 
 More on this later.
+
+# 2018-01-02 13:00, in which more thinking about the implications of GameObject-Oriented Design
+
+The appeal of being locked into making changes that literally only touch on the GameObject in question is that it is a very, very clear constraint that, in turn, makes the experimental quality of the project semi-rigorous. The project becomes a work about the affordances of _only that part of the engine_ (in conversation with the specific setup that _TANKS!_ represents). It allows me to be clear about what I can and can't do as a designer and maker in this space (it defines the space to a large extent).
+
+_But_ that level of constraint, and particularly not being able to shift the meaning of the underlying game (tanks killing each other) means that a great deal of potential expressive range would be lost. Lighting, for example, has a huge amount of affective potential, but some of that affective potential exists specifically in relation to other aesthetic forms. For example, light reveals information - but the _kind of information revealed_ has a huge impact on the experience of it. If we're strict, the main things light can reveal in _TANKS!_ are the tanks themselves (relevant to knowing where you and your enemy area, making it more or less difficult to shoot them and the environment (which is a set tableau of a desert-y environment with oil derricks and non-descript buildings). "Revealing information" as a quality of light would presumably be significantly more interesting if you could _choose the information itself_.
+
+So by way of example, if you wanted to create some kind of narrative property you might want to write things on the environment which can then be illuminated in some way by the tanks (whether through headlights or launched shell-lights or something else), say with UI Text objects. But in the "strict interpretation" of this project, you couldn't really do that because UI Text is not a Unity GameObject in the Light category. Similarly you couldn't change the architecture of the level to be more supportive of German Expressionist lighting because 3D Object is not the topic here.
+
+There's a pretty clear sense in which restricting yourself to a single GameObject in the ontology of the engine ties you to highly limited game design. I mean, one of the much touted things about game design/making is that it's an amalgam of all these different disciplines and ideas and that they work in concert. By only working with Light and Light Alone you can't actually explore all the possibilities that Light affords in the context of game design.
+
+On the other hand, if I allow myself to "start with Light" or "focus on Light" and then draw in other redesign/reimplementation ideas on top of the base game, how rigorous can the project really be? It starts to look a bit too much me just doing whatever? How would I formally tie the design to the materials once the materials become highly varied?
+
+Could be that the division into Unity's ontological categories is just a weird division? _Get X Avoid Y_ was a rigorous game in the sense that I _only_ worked with the visual qualities of the game (along with the resulting physical/gameplay qualities of those visuals). But that's a different kind of dimension to what I'm working with here. Unity's ontological entities - Light, Camera, Particle System, and so specific in a lot of ways that they might be less expressive that you might want?
+
+I do have a sneaking suspicion here that I'm a) just wasting time because I'm scared to start (almost certainly true) and b) not giving myself enough credit in terms of ability to be creative within such tight constraints and c) getting too attached to the idea of making "good games" in this mode, as opposed to treating it as a form of experimentation.
+
+So a reminder: as ever, this work doesn't have to be "good" in a universal sense. The _project_ is good and important, the games may or may not be.
+
+All that is to say that I think I begin with the most constrained version of this idea. Only Light. And if it turns out to suck too much, I will learn from that and expand, abandon, or complete the project as perceived necessary.
