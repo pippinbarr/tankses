@@ -350,3 +350,29 @@ It's kind of weird feeling that there's this quite substantial apparatus (The Me
 Anyway, that's the current project. The [TANKS!ES GitHub repository](https://github.com/pippinbarr/tankses) is public and live and includes an already rather wordy [process journal](https://github.com/pippinbarr/tankses/blob/master/Process/README.md) if you want to immerse yourself in my early concerns about the direction of the project and its relationship to method and teaching.
 
 See you on the other side.
+
+
+# 2018-01-02 09:24, in which I fret some more about the principles of design for this project
+
+I've contemplated some vague images in my mind of versions of the game for Light for example
+
+- Rather than being damaged by light, you fire lights to illuminate the world and understand it?
+- You fire pointlights that stay on the ground and if you drive through them the light sticks to you (either the point light or even changing emission of your tank's material?) - I guess this is 'just' a representation of damage?
+
+Even in this brief flirtation with other design possibilities I'm running into a formal issue. Which the question of whether the underlying game should be kept (relatively) consistent or not. Like, TANKS! is pretty unavoidably about killing your opponent with projectiles, right? To what extent is it okay for my variations to deny that basic principle? As earlier, the verbs here are move, shoot, evaluate - am I honour bound to think about my variations/interventions in those terms? Can I _negative_ one or more of them in a design?
+
+This speaks to a possible more grounded question around the "materials" aspect of all this.
+
+If the idea here is to take a _specific material_ like Light and intervene in and with it to create a variation, should I be aiming to _only_ intervene in and with that material? Like, in the Light versions of the game, am I only working with gameobjects that are Lights, the Lighting view in the Inspector, and Lighting-relevant API code in scripts? That's a very striking limitation and it's pretty appealing in terms of answering questions... but does it end up being so restrictive that you can't do something "interesting"?
+
+And what is "interesting" anyway? The point of the project is about a conversation with materials. What if they're boring conversational partners? What if they don't want to talk to me? Ha ha. But seriously...
+
+Re: the whole question of the Tank Ur-Game being about shooting... well, one thing we could say in the context of an engine-oriented take on this is that we're really talking about moving objects, projectiles, and reactions to those projectiles. As such it's not necessarily the case that we have to talk about destruction/death/killing. A game of catch or ultimate frisbee or basketball has the same principle ideas. As close range you can even thinking about projectiles as simply _giving_ something to someone else.
+
+BUUUUUUT those kinds of potential changes could easily involve changes to code _not_ directly related to the material in question.
+
+So, the question is about the kind of conversation we can have perhaps. Is it purely restricted to the language of the specific material, or is it about the larger conceptual space that the material allows us to think about?
+
+But, devil's advocate, is there something cool about keeping the basic principles of the game (projectiles unto death) stable? It's a funny fuck you to my personal preferences in design?
+
+More on this later.
