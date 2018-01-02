@@ -278,6 +278,7 @@ __Next steps__
 
 I suspect that actually building out a light-based version of the game is going to throw me back into some interesting/trouble considerations of the actual underlying concept here, so I'll look forward to that potential agony when it comes.
 
+---
 
 ## 2017-12-31 10:10, in which I've officially created the base Unity project with TANKS! in it and I think about how even that was surprisingly stressful
 
@@ -328,6 +329,7 @@ One great thing here is that I'm introducing an extra level of detail with the b
 
 That's it. I've written inordinate amounts already about this game I haven't started making, but I think I've written myself into a place of at least understanding what's ahead of me and what I'm looking to achieve. Hi. It's me. Your son.
 
+---
 
 # 2018-01-01 18:32, in which I write what I imagine to be a post for my site summarising this new project
 
@@ -351,6 +353,7 @@ Anyway, that's the current project. The [TANKS!ES GitHub repository](https://git
 
 See you on the other side.
 
+---
 
 # 2018-01-02 09:24, in which I fret some more about the principles of design for this project
 
@@ -377,7 +380,9 @@ But, devil's advocate, is there something cool about keeping the basic principle
 
 More on this later.
 
-# 2018-01-02 13:00, in which more thinking about the implications of GameObject-Oriented Design
+---
+
+# 2018-01-02 13:00, in which more thinking about the implications of GameObject-Oriented Design resulting in an acceptance of the most constrained version of the project
 
 The appeal of being locked into making changes that literally only touch on the GameObject in question is that it is a very, very clear constraint that, in turn, makes the experimental quality of the project semi-rigorous. The project becomes a work about the affordances of _only that part of the engine_ (in conversation with the specific setup that _TANKS!_ represents). It allows me to be clear about what I can and can't do as a designer and maker in this space (it defines the space to a large extent).
 
@@ -396,3 +401,25 @@ I do have a sneaking suspicion here that I'm a) just wasting time because I'm sc
 So a reminder: as ever, this work doesn't have to be "good" in a universal sense. The _project_ is good and important, the games may or may not be.
 
 All that is to say that I think I begin with the most constrained version of this idea. Only Light. And if it turns out to suck too much, I will learn from that and expand, abandon, or complete the project as perceived necessary.
+
+---
+
+# 2018-01-02 17:40, in which Pippin responds to the experience of using his first branch to create a first (minimal) variation
+
+Okay. So that was pretty stressful as it involved on taking on many levels and aspects of the project all at once. On the plus side I'm still here and to some extent conquered a number of issues. On the minus side it didn't leave me feeling all that excited about the overall project. Hopefully that will pass. So let's consider what happened (bearing in mind there's an entry in the commit for that version in its branch - `experiments-light`)
+
+__Branching__. So, I did my first ever intentional branch in a Git project ever (lame, I know, but here we are). I named it `experiments-light` to reflect the idea it will contain general experimentation with lights in Unity in a series of scenes. The idea is that this will _not_ be integrated into the master because it's pure experimentation. It worked in the sense that the branch now exists and I committed to it.
+
+__Branching and the journal__. Issue: The process journal is project wide and so should be branch-agnostic. As such I probably _always need to commit it to the `master`_ which is going to be a shitter to remember. Maybe the fact I'll have to switch branches semi-constantly will get me real comfortable with brances? That would be nice. Just for practice, I'm going to make sure I save this text and switch the project back to `master` to make sure I commit this in the right place (and to see what happens to this file when I switch...) Okay well I managed to do it so that there seem to be no major disaster. I guess a weird thing is just that each branch will just have a process journal frozen at the time the branch started. Can I merge across single files? Probably? Do I want to? It sounds irritating. Ah shit. Also, the branch thing feels genuinely scary. All this 1 commit behind blah blah blah ugh. Anyway, for now let's just assume I commit process entries to `master` and leave it at that. Partial merges of one file sound... stupid.
+
+__Prefabs and variations__. Working with prefabs went pretty smoothly - I was able to duplicate the tank prefab, repopulate its data, and then add elements to it to change the game (spotlights for headlights). I was able to change the lighting settings for the scene. That was all fine.
+
+__Scripts and variations__. As per the commit in `experiments-light` it was quite a mission to get established with how to modify the game, especially in terms of scripts. I got into trouble when I tried to add controls for the tanks because I was initially just duplicating the TankMovement script entirely and trying to edit it. But then you end up with a different class name HeadlightsTankMovement which then isn't referenced in any of the other scripts. Shit. I eventually worked out that a fairly clear way to work is to make the main original scripts subclassable (making the various methods `protected virtual` so they can be overridden). That meant I could create my HeadlightsTankMovement as an extension of TankMovement and polymorphism kept everything happy without major work from me. It lead to a fairly clear script, too, which is pleasing. An alternative would have been a brand new script, but that then would have to have been integrated into the GameManager and so on, so I think it may end up cleaner subclassing the scripts that already exist? This felt like quite major and frightening programming philosophy to have to dive into so fast. I should probably congratulate myself on finding _any_ solution, let alone a decent-seeming one moving forward.
+
+__More Git__. Definitely genuinely afraid I'll lose a bunch of work at some point by switching branches expecting it to keep track of files I was working on and then finding out it stomps them somehow. I guess that will just have to happen to me for me to experience it. Also noticed/remembered I have git integration in Atom meaning I could commit from here. I think I'll stick with SourceTree for now.
+
+__Design?__. The big sad face here is that I didn't really enjoy what I was doing as I made the variation. I guess it's just a boring variation - headlights you can turn on and off. Fair enough, it sucks. And if fact you get basically all the information (about it being boring) just by having the headlights at all (turning them on and off didn't add that much - except stealth I guess?). My fear is that I'll be limited to these sorts of hyper-minimalist interventions into the original game and that because the original game is still there and is, frankly, dull - tank shoots tank - it won't be easy/possible to make interventions I think are interesting. So perhaps the fear is I might learn a _lot_ about managing this project, but then find the design implication uninspiring? This comes back to the question of rigour... if I can only work with light (which I adhered to in this first experiment - only added lights to the prefab and light-oriented scripting to the scripts) I won't have enough expressive range. THAT said, I have to keep trying and fucking around. Disco Tank? Spooky Ghost Tank ala Mario Party? Day and Night Tank? Blah blah blah? I mean, they all sound a bit boring too...
+
+__Design?!__ It might be the case that I need to go back to the drawing board a tiny bit just to remind myself and extend on my thinking about why this project is interesting in the first place. Formal experimentation is fine and good _so long as it leads to interesting work_. Just a dry stick-up-my-ass set of variations that one nods and says "yes that is a variation" will not sustain me.
+
+And commit.
