@@ -473,3 +473,70 @@ __Pretty__. And remember that I'm allowed to have purely _aesthetic_ versions. N
 __Voluble__. Jesus Christ I'm writing a lot. Too much? This is like a ridiculous amount of words about a game I've barely started. [But I'm grappling, I'm grappling. I'm grap-grap-grappling. I'm grap-grap-grap-grap-grappity-grappling](https://www.youtube.com/watch?v=aR8qtxts1jY).
 
 Aaaand commit.
+
+---
+
+# 2018-01-03 18:18, in which I lay in bed trying to think my way out of my concern for the project, aka. NOTES FROM A DARK ROOM
+
+
+
+```
+Light is emotional. Dim. Stark.
+You can strip the environment and models and sounds and the “pure game” to build back up for light.
+Ideas are a dime a dozen.
+Part of the conversation with materials takes place in your head.
+The tool itself can be used for deeper inquiry to find out what something feels like.
+Brainstorming ideas is important. Process your thoughts.
+Examine the atomic structure of the game's design and implementation.
+Examine the specifics of your material of inquiry - what are the available qualities of light?
+Light as weapon. Light as movement. Light as evaluation. The negation of these.
+The game played out on a plane. Free from the oppression of its graphics.
+The game played without a floor.
+Have ideas without the engine in your face.
+Have ideas that don’t LOOK LIKE the game.
+Slow tanks in a dimly lit environment. Agonizingly slow. Narrative as the shells arc through air.
+Fuck that music.
+Emotion. An emotional examination of the tanks. Not jaunty.
+Controlling a spotlight to play hide and seek.
+Rejecting the premise.
+Let your mind voyage more.
+Play with cameras instead if you want to.
+Perhaps light is less easy a starting point than you had imagined.
+Overly functional lighting - each relevant element with its spotlight.
+Reacting to higher level ideas about light, not fitting it in to the obvious slots of THIS GAME.
+Light and Camera are intimately related. Can’t have one without the other.
+Light the level post war, destroyed tanks unable to move. (Or is that 3D objects?)
+Drift.
+Rage rage against the dying of the light.
+“They’re shooting at the lights”
+I’m going to need to take done serious artistic license to be happy. So be it.
+Two tanks in front of a video of driving.
+Strobe.
+Disco ball.
+Two tanks walking toward the light.
+Shadows without objects.
+Hunted by the light, cowering in the shadows. What we do in the shadows.
+Being the light.
+Light the revealer.
+Your torch battery dying.
+The light dying or becoming unbearable.
+Tanks fighting on the edge of the nuclear apocalypse. A high pitched whining.
+Black and white.
+NON FUNCTIONAL LIGHT
+```
+
+Those are the notes I wrote into my phone in a state of ennui verging on despair. Such is design. And important element of this form was the impetus toward poetry simply because of line length and the difficulty of typing fast on the phone keyboard.
+
+There are ideas in there. And importantly there are strategies in there.
+
+I need to do a "proper" brainstorm where I
+- Think about the affordances of the game (what is is made of conceptually?)
+- Think about the affordances of the ontology (what is Light made of, literally?)
+- Think about the _connotations_ of the ontology (what is Light for in games, what is it for in Life?)
+- Free myself to imagine scenes, plays, cinematic moments, as well as games
+
+Perhaps an approach to the poetry of this might actually be to create works inspired by Light that draw from, begin in TANKS! but may only fleetingly reference it. TANKS! is perhaps visible (in the movement or a sound or a model or an activity) but not dominant?
+
+So that big ol' brainstorm. Tomorrow. Tomorrow my friend. Tomorrow. I will do it, and I will produce some new aesthetic prototypes.
+
+Thought for the manifesto: need to say something about expressive uses of the ontology. Rather than game design uses of the ontology. Fuck game design. (For right this minute. Sorry, game design, I still love you obviously.)
