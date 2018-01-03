@@ -22,3 +22,12 @@ __Design__
 __Concerns__
 
 - Does this stray too far from the idea of a conversation with light? Is it overwrought? Is it too complex while simultaneously not being all that interesting? Very narrative, not very formal? More like a free association with a specific property of light?
+
+
+# Light Shells
+
+I'm implemented the basics of this in commit 40a69e23c165aae27ed3a7402f717466c1504c47 (just now noticed these are not being auto converted to commit links which is sad, renders them kind of stupid, oh well). The idea here is that you replace the projectile itself with a light and instead of exploding it just rests on the environment itself, therefore adding to the overall light of the scene.
+
+I've had ideas around this become a new style of the tanks fighting - they fight with light, where going into the light reduces health etc. Or alternatively the opposite - going into the light is how you score points, or something. But again this feels like really trivial intervention, just recasting one typical game element (a 3D model of a shell with a rigidbody) with another (a light source). Yeah it's aesthetically different, but not _that much_.
+
+I need to think more deeply than this about what light does and try to work from there? Or is _TANKS!_ overwhelming in its kind of rhetoric and world view? This will need some thought.
