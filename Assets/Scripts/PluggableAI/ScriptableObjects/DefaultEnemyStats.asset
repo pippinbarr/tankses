@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084144002a01e1f45bdf15db991af5c1, type: 3}
+  m_Name: DefaultEnemyStats
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  lookRange: 80
+  lookSphereCastRadius: 2
+  attackRange: 40
+  attackRate: 1
+  attackForce: 15
+  attackDamage: 50
+  searchDuration: 8
+  searchingTurnSpeed: 120
