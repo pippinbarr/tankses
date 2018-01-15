@@ -28,13 +28,10 @@ namespace Complete
                 if (!Physics.Raycast(m_WeakPoints[i].position, m_ReverseSun, 100f, LayerMask.GetMask("Default")))
                 {
                     Debug.DrawRay(m_WeakPoints[i].position, m_ReverseSun * 100, Color.green);
-                    //damage = true;
-                    //break;
+                    damage = true;
                 }
                 else {
                     Debug.DrawRay(m_WeakPoints[i].position, m_ReverseSun * 100, Color.red);
-
-
                 }
             }
             if (damage)

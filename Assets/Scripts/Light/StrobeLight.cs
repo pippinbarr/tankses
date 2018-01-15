@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class StrobeLight : MonoBehaviour {
 
-    private Light light;
+    private Light sun;
     public float flashFrequency = 0.75f;
     public float flashLength = 0.05f;
     private float timeElapsed;
 
 	// Use this for initialization
 	void Start () {
-        light = GetComponent<Light>();
-        light.enabled = false;
+        sun = GetComponent<Light>();
+        sun.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -26,10 +26,10 @@ public class StrobeLight : MonoBehaviour {
 	}
 
     IEnumerator Flash() {
-        light.enabled = true;
+        sun.enabled = true;
         transform.rotation = Quaternion.Euler(new Vector3(Random.Range(20,160), Random.Range(0, 360), 0));
         //transform.rotation = ;
         yield return new WaitForSeconds(flashLength);
-        light.enabled = false;
+        sun.enabled = false;
     }
 }

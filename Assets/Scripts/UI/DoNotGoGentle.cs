@@ -6,7 +6,7 @@ using UnityEngine;
 public class DoNotGoGentle : MonoBehaviour
 {
 
-    public Light light;
+    public Light sun;
     public float lineTime = 1f;
 
     private string [] poem = new string[] {
@@ -42,7 +42,7 @@ public class DoNotGoGentle : MonoBehaviour
     IEnumerator DisplayPoem() {
         for (int i = 0; i < poem.Length; i++) {
             text.text = poem[i].ToUpper();
-            light.intensity -= (1f/(poem.Length+2));
+            sun.intensity -= (1f/(poem.Length+2));
             yield return new WaitForSeconds(lineTime);
         }
     }
