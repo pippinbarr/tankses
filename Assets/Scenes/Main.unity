@@ -584,7 +584,7 @@ MonoBehaviour:
   m_MessageText: {fileID: 102963701}
   m_TankPrefabs:
   - {fileID: 173472, guid: 756d3a6506f2f8241b4e8badde68567a, type: 2}
-  - {fileID: 173472, guid: 7ff6571596052b34c9b5fc1ce3fd7244, type: 2}
+  - {fileID: 173472, guid: 756d3a6506f2f8241b4e8badde68567a, type: 2}
   - {fileID: 173472, guid: 6401c3a9d0f3f4c2db7b9aa2c313f353, type: 2}
   m_Tanks:
   - m_PlayerColor: {r: 0.16470589, g: 0.39215687, b: 0.69803923, a: 0}
