@@ -319,6 +319,16 @@ Prefab:
       propertyPath: m_TankPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 173472, guid: ea926fa8968c9497e856b6036a09027a, type: 2}
+    - target: {fileID: 114438700837311892, guid: f3637daa4d955400792e66191e0df9b1,
+        type: 2}
+      propertyPath: m_TankPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 173472, guid: b6d1c0f1e8da2446391c19cc5abbc1d5, type: 2}
+    - target: {fileID: 114438700837311892, guid: f3637daa4d955400792e66191e0df9b1,
+        type: 2}
+      propertyPath: m_TankPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 173472, guid: b6d1c0f1e8da2446391c19cc5abbc1d5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3637daa4d955400792e66191e0df9b1, type: 2}
   m_IsPrefabParent: 0

@@ -480,6 +480,11 @@ Prefab:
       propertyPath: m_MessageText
       value: 
       objectReference: {fileID: 102963701}
+    - target: {fileID: 82590349184480124, guid: f3637daa4d955400792e66191e0df9b1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3637daa4d955400792e66191e0df9b1, type: 2}
   m_IsPrefabParent: 0
