@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.32837367, g: 0.27627596, b: 0.53676474, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -113,7 +113,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 40fc6960410ad4efcaa6ba6c6e5f1c9d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 9c192eca99ad245eeb225efa8eccc6f7, type: 2}
 --- !u!1 &89138377
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &102963700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -476,6 +476,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 185468, guid: 312c52d27be2d2d42acea3ccebc4694b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 312c52d27be2d2d42acea3ccebc4694b, type: 2}
   m_IsPrefabParent: 0
@@ -588,9 +592,9 @@ MonoBehaviour:
   m_CameraControl: {fileID: 1771596988}
   m_MessageText: {fileID: 102963701}
   m_TankPrefabs:
-  - {fileID: 173472, guid: 756d3a6506f2f8241b4e8badde68567a, type: 2}
-  - {fileID: 173472, guid: 7ff6571596052b34c9b5fc1ce3fd7244, type: 2}
-  - {fileID: 173472, guid: 6401c3a9d0f3f4c2db7b9aa2c313f353, type: 2}
+  - {fileID: 173472, guid: 2c188f9e29d624827bfc0fd538f7778c, type: 2}
+  - {fileID: 173472, guid: 2c188f9e29d624827bfc0fd538f7778c, type: 2}
+  - {fileID: 173472, guid: 2c188f9e29d624827bfc0fd538f7778c, type: 2}
   m_Tanks:
   - m_PlayerColor: {r: 0.16470589, g: 0.39215687, b: 0.69803923, a: 0}
     m_SpawnPoint: {fileID: 194018016}
@@ -599,6 +603,8 @@ MonoBehaviour:
     m_Instance: {fileID: 0}
     m_Wins: 0
     m_WayPointList: []
+    m_isAITank: 0
+    m_StartState: {fileID: 0}
   - m_PlayerColor: {r: 0.8980392, g: 0.18039216, b: 0.15686275, a: 0}
     m_SpawnPoint: {fileID: 2083660209}
     m_PlayerNumber: 2
@@ -606,6 +612,8 @@ MonoBehaviour:
     m_Instance: {fileID: 0}
     m_Wins: 0
     m_WayPointList: []
+    m_isAITank: 1
+    m_StartState: {fileID: 11400000, guid: 7af84646898cb48d7834e6a8dfb88813, type: 2}
   - m_PlayerColor: {r: 0.03346852, g: 0.9705882, b: 0, a: 0}
     m_SpawnPoint: {fileID: 1647209239}
     m_PlayerNumber: 2
@@ -613,6 +621,8 @@ MonoBehaviour:
     m_Instance: {fileID: 0}
     m_Wins: 0
     m_WayPointList: []
+    m_isAITank: 1
+    m_StartState: {fileID: 11400000, guid: ed05f3da91a5e4d7ba5508f97f5cebbc, type: 2}
   wayPointsForAI:
   - {fileID: 1126266732}
   - {fileID: 1872332466}
