@@ -50,17 +50,7 @@ namespace Complete
     Instantiate(m_TankPrefabs[i], m_Tanks[i].m_SpawnPoint.position, m_Tanks[i].m_SpawnPoint.rotation) as GameObject;
                 // Set player number (note this means you should put Player tanks early on)
                 m_Tanks[i].m_PlayerNumber = i + 1;
-
-                if (m_TankPrefabs[i].GetComponent<StateController>())
-                {
-                    // If the prefab has a StateController it's an AI tank and we should setup AI
-                    m_Tanks[i].SetupAI(wayPointsForAI);
-                }
-                else
-                {
-                    // Otherwise we should setup for Player
-                    m_Tanks[i].SetupPlayerTank();
-                }
+                m_Tanks[i].Setup(wayPointsForAI);
             }
         }
 

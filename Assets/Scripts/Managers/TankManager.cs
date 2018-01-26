@@ -13,6 +13,9 @@ namespace Complete
         // and whether or not players have control of their tank in the 
         // different phases of the game.
 
+        public bool m_IsAITank = false;
+        public TankState m_StartState;
+
         public Color m_PlayerColor;                             // This is the color this tank will be tinted.
         public Transform m_SpawnPoint;                          // The position and direction the tank will have when it spawns.
         [HideInInspector] public int m_PlayerNumber;            // This specifies which player this the manager for.
@@ -25,6 +28,24 @@ namespace Complete
         private TankShooting m_Shooting;                        // Reference to tank's shooting script, used to disable and enable control.
         private GameObject m_CanvasGameObject;                  // Used to disable the world space UI during the Starting and Ending phases of each round.
 		private StateController m_StateController;				// Reference to the StateController for AI tanks
+
+        public void Setup(List<Transform> wayPointList)
+        {
+            if (m_IsAITank)
+            {
+                UnityEngine.Object.Destroy(m_Instance.gameObject.GetComponent<TankMovement>());
+                m_PlayerNumber = 1000;
+                m_Instance.GetComponent<Rigidbody>().isKinematic = false;
+                m_Instance.GetComponent<StateController>().currentState = m_StartState;
+                SetupAI(wayPointList);
+            }
+            else
+            {
+                UnityEngine.Object.Destroy(m_Instance.GetComponent<NavMeshAgent>());
+                UnityEngine.Object.Destroy(m_Instance.GetComponent<StateController>());
+                SetupPlayerTank();
+            }
+        }
 
 		public void SetupAI(List<Transform> wayPointList)
 		{
